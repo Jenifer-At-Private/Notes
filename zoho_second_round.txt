@@ -1,0 +1,290 @@
+1) Alternate sorting: Given an array of integers, rearrange the array in such a way that the first element is first maximum and second element is first minimum.
+
+	 Eg.) Input  : {1, 2, 3, 4, 5, 6, 7}
+              Output : {7, 1, 6, 2, 5, 3, 4} 
+
+#########################################################################################
+
+2) Remove unbalanced parentheses in a given expression.
+
+	 Eg.) Input  : ((abc)((de))
+              Output : ((abc)(de))  
+
+              Input  : (((ab)
+              Output : (ab) 
+
+#########################################################################################
+
+3) Form a number system with only 3 and 4. Find the nth number of the number system.
+
+	Eg.) The numbers are: 3, 4, 33, 34, 43, 44, 333, 334, 343, 344, 433, 434, 443, 444, 	     3333, 3334, 3343, 3344, 3433, 3434, 3443, 3444 ….
+
+########################################################################################
+
+4) Check whether a given mathematical expression is valid.
+
+ 	 Eg.) Input  : (a+b)(a*b)
+         Output : Valid
+
+         Input  : (ab)(ab+)
+         Output : Invalid
+
+         Input  : ((a+b)
+         Output : Invalid 
+
+############################################################################
+
+5) Print the word with odd letters as
+
+P         M
+ R      A
+   O  R
+     G
+  O    R
+ R       A
+P          M 
+
+############################################################################
+6) Given a set of numbers like <10, 36, 54,89,12> we want to find sum of weights based on the following conditions
+    1. 5 if a perfect square
+    2. 4 if multiple of 4 and divisible by 6
+    3. 3 if even number
+
+And sort the numbers based on the weight and print it as follows
+
+<10,its_weight>,<36,its weight><89,its weight>
+
+Should display the numbers based on increasing order
+
+############################################################################
+
+7) Save the string “WELCOMETOZOHOCORPORATION” in a two dimensional array and search for substring like “too” in the two dimensional string both from left to right and from top to bottom.
+
+w	e	L	C	O
+M	E	T	O	Z
+O	H	O	C	O
+R	P	O	R	A
+T	I	O	n	  
+
+And print the start and ending index as
+
+Start index : <1,2>
+
+End index: <3, 2>
+
+############################################################################
+
+8) Given a 9×9 sudoku we have to evaluate it for its correctness. We have to check both the sub matrix correctness and the whole sudoku correctness.
+
+
+###########################################################################
+
+9) Given a two dimensional array of string like
+
+  <”luke”, “shaw”>
+  <”wayne”, “rooney”>
+  <”rooney”, “ronaldo”>
+  <”shaw”, “rooney”> 
+
+
+Where the first string is “child”, second string is “Father”. And given “ronaldo” we have to find his no of grandchildren Here “ronaldo” has 2 grandchildren. So our output should be 2.
+
+############################################################################
+
+10) Write a program to give the following output for the given input
+
+Eg 1: Input: a1b10
+      Output: abbbbbbbbbb
+Eg 2: Input: b3c6d15
+      Output: bbbccccccddddddddddddddd
+The number varies from 1 to 99.
+
+
+############################################################################
+
+
+11) Write a program to sort the elements in odd positions in descending order and elements in ascending order
+
+Eg 1: Input: 13,2 4,15,12,10,5
+      Output: 13,2,12,10,5,15,4
+Eg 2: Input: 1,2,3,4,5,6,7,8,9
+      Output: 9,2,7,4,5,6,3,8,1 
+
+############################################################################
+
+12) Write a program to print the following output for the given input. You can assume the string is of odd length
+
+
+Eg 1: Input: 12345
+       Output:
+1       5
+  2   4
+    3
+  2  4
+1      5
+Eg 2: Input: geeksforgeeks
+      Output:
+g                         s
+  e                     k
+    e                 e
+      k             e
+        s         g
+          f      r
+             o
+          f     r
+        s         g
+      k             e
+    e                 e
+  e                      k
+g                          s 
+
+
+############################################################################
+
+
+13)  Find if a String2 is substring of String1. If it is, return the index of the first occurrence. else return -1.
+
+Eg 1:Input:
+        String 1: test123string
+         String 2: 123
+     Output: 4
+Eg 2: Input:
+        String 1: testing12
+        String 2: 1234 
+      Output: -1
+
+############################################################################
+
+14)  Given two sorted arrays, merge them such that the elements are not repeated
+
+Eg 1: Input:
+        Array 1: 2,4,5,6,7,9,10,13
+        Array 2: 2,3,4,5,6,7,8,9,11,15
+       Output:
+       Merged array: 2,3,4,5,6,7,8,9,10,11,13,15 
+
+
+############################################################################
+
+
+16) Using Recursion reverse the string such as
+
+Eg 1: Input: one two three
+      Output: three two one
+Eg 2: Input: I love india
+      Output: india love I 
+
+############################################################################
+
+
+17)  To find the odd numbers in between the range.
+Input:
+2
+15
+Output:
+3,5,7,9,11,13
+
+###########################################################################
+
+18) To find the factors of the numbers given in an array and to sort the numbers in descending order according to the factors present in it.
+Input:
+Given array : 8, 2, 3, 12, 16
+Output:
+12, 16, 8, 2, 3
+
+
+###########################################################################
+
+19)  To output the number in words (0-999)
+Input: 234
+Output: Two hundred and Thirty Four
+
+##########################################################################
+
+20)  To find the print the pattern:Ip: n=5
+Op:
+1
+1 1
+2 1
+1 2 1 1
+1 1 1 2 2 1
+
+###########################################################################
+
+21) A man his driving car from home to office with X petrol. There are N number of petrol bunks in the city with only few capacities and each petrol is located in different places For one km one liter will consume. So he fill up petrol in his petrol tank in each petrol bunks. Output the remaining petrol if he has or tell him that he cannot travel if he is out of petrol.
+Input:
+Petrol in car: 2 Liters
+Petrol bunks: A B C
+Distance from petrol each petrol bunks: 1, 5, 3
+Capacities of each petrol bunk: 6, 4, 2
+Output:
+Remaining petrol in car is 5 liters
+
+############################################################################
+
+22) Print the given pattern:
+Input:
+N= 3, M=3
+Output:
+X X X
+X 0 X
+X X X
+
+Input:
+N=4 M=5
+Output:
+X X X X
+X 0 0 X
+X 0 0 X
+X 0 0 X
+X X X X
+
+Input:
+N=6 M=7
+X X X X X X
+X 0 0 0 0 X
+X 0 X X 0 X
+X 0 X X 0 X
+X 0 X X 0 X
+X 0 0 0 0 X
+X X X X X X
+
+
+###########################################################################
+
+23)  To find the number of groups and output the groups:
+Explanation: To find the sum of the elements in the groups and that sum should be divisible by input X and the groups should be limited to range with X numbers.
+If X is 3, then the group should have only 2 elements and 3 elements from the array whose sum is divisible by 3.
+Input:
+Array: 3, 9, 7, 4, 6, 8
+X: 3
+Output:
+3, 9
+3, 6
+9, 6
+3, 9, 6
+No of groups: 4
+
+###########################################################################
+
+24) To output the given string for the given input which is an integer.Input: 1Output: AInput: 26Output: ZInput : 27Output: AAInput: 28:Output: ABInput: 1000Output: ALL
+
+##########################################################################
+
+25) Input:
+Number of elements in set1: 4
+Elements are: 9, 9, 9, 9
+Number of elements in set 2: 3
+Elements are: 1,1,1
+Output:
+1, 0, 1, 1, 0
+Input:
+Number of elements in set1: 11
+Elements are: 7,2,3,4,5,3,1,2,7,2,8
+Number of elements in set 2: 3
+Elements are: 1,2,3
+Output: 7,2,3,4,5,3,1,2,8,5,1
+
+
+##########################################################################
+

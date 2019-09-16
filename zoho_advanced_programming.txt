@@ -1,0 +1,207 @@
+1) A matrix game was given with 5 rules. We were asked to implement each of the rules separately.
+
+  R3 | -   -   - |
+  R2 | -   -   - |
+  R1 | -   -   - |
+       C1  C2  C3
+
+Each of the 9 cells can either be empty or filled with an atom. R3, R2, R1 are the rays that originate from the left. C1, C2, C3 are the rays that originate from the bottom of the box.
+
+Input : Position of the atoms and the rays that gets originated from the outside of the box.  
+
+  Eg.) 3
+       3 1
+       2 2
+       1 3
+       3
+       R3 C1 C3
+
+Output  : Print the box. 
+
+Rule 1:
+A ray that has an atom in its path should print ‘H’ (Hit) If it does not have any atoms in its path, the ray should pass to the other side.
+
+       C1      C3
+  R3 | -   -   - | R3
+  H  | -   X   - |
+  R1 | -   -   - | R1
+       C1  H   C3 
+
+Rule 2 & 3:
+A ray that has an atom in its diagonal adjacent position should refract.
+
+  H  | -   -   - |
+  H  | X   -   - |
+  R  | -   X   - |
+       R   H   R  
+
+Input rays: R1, R2, C3
+
+  H  | -   X   - |
+  R2 | -   -   - | C3
+     | -   -   - |
+       R2      C3  
+
+Rule 4:
+A ray that has atoms in both of the diagonal adjacent positions should reflect back.
+
+Input ray: C2
+   | -   -   - |
+   | X   -   X |
+   | -   -   - |
+         R   
+
+Input ray: R2
+     | -   X   - |
+  R  | -   -   - |
+     | -   X   - | 
+
+Rule 5:
+The deflection of rays should happen in the order of the input rays.
+
+Input Rays: R3, R2, C1, C3
+   H | -   X   - |
+  R2 | -   -   - | C3
+     | -   -   - |
+       R2      C3 
+
+The final task was to implement these rules for dynamic matrix size.
+
+Input : no of rows, no of columns
+  Eg.) 4 4 (row & column)
+       2 (No of atoms)
+       4 4 (Position of atom)
+       2 2 (Position of atom)
+       2 (No of rays)
+       R4 C2 (Ray number)
+
+  H  | -   -   -   X |
+     | -   -   -   - |
+     | -   X   -   - |
+     | -   -   -   - |
+           H  
+
+The final task was very confusing and it had to handle all the cases. There are chances for a ray to end at the starting position if the number of rows and columns are more than 5.
+
+
+############################################################################
+
+2) Here they asked us to create a “Railway reservation system” and gave us 4 modules. The modules were:
+    1.	Booking
+    2.	Availability checking
+    3.	Cancellation
+    4.	Prepare chart
+We were asked to create the modules for representing each data first and to continue with the implementation phase.
+
+
+############################################################################
+
+3)
+
+Rule 1:
+ Design a Call taxi booking application
+-There are n number of taxi’s. For simplicity, assume 4. But it should work for any number of taxi’s.
+-The are 6 points(A,B,C,D,E,F)
+-All the points are in a straight line, and each point is 15kms away from the adjacent points.
+-It takes 60 mins to travel from one point to another
+-Each taxi charges Rs.100 minimum for the first 5 kilometers and Rs.10 for the subsequent kilometers.
+-For simplicity, time can be entered as absolute time. Eg: 9hrs, 15hrs etc.
+-All taxi’s are initially stationed at A.
+-When a customer books a Taxi, a free taxi at that point is allocated
+-If no free taxi is available at that point, a free taxi at the nearest point is allocated.
+-If two taxi’s are free at the same point, one with lower earning is allocated
+-Note that the taxi only charges the customer from the pickup point to the drop point. Not the distance it travels from an adjacent point to pickup the customer.
+-If no taxi is free at that time, booking is rejected
+
+Design modules for
+
+1)    Call taxi booking 
+Input 1:
+Customer ID: 1
+Pickup Point: A
+Drop Point: B
+Pickup Time: 9
+
+Output 1:
+Taxi can be allotted.
+Taxi-1 is allotted
+
+Input 2:
+Customer ID: 2
+Pickup Point: B
+Drop Point: D
+Pickup Time: 9
+
+Output 1:
+Taxi can be allotted.
+Taxi-2 is allotted 
+
+(Note: Since Taxi-1 would have completed its journey when second booking is done, so Taxi-2 from nearest point A which is free is allocated)
+
+Input 3:
+Customer ID: 3
+Pickup Point: B
+Drop Point: C
+Pickup Time: 12
+
+Output 1:
+Taxi can be allotted.
+Taxi-1 is allotted 
+
+Rule 2:
+Display the Taxi details
+Taxi No:    Total Earnings:
+BookingID    CustomerID    From    To    PickupTime    DropTime    Amount
+   
+Output:
+Taxi-1    Total Earnings: Rs. 400
+
+1     1     A    B    9    10    200
+3    3    B    C    12    13    200
+
+Taxi-2 Total Earnings: Rs. 350
+2    2    B    D    9    11    350 
+
+
+These were just sample inputs. It should work for any input that they give.
+Those who finished both the modules within 3 hours and if it worked for all the inputs they give, those candidates were given extra modules to work with.
+
+############################################################################
+
+
+4) Real time programming and analysis:
+Note: Showing output does matter need to show the output as soon as possible. And also need to solve the constraints very fast, since you know what you have done in your program. After finishing the program always explain the logic behind it and the constraints about the processing and how you solved those constraints to the technical people.
+1) To form a structure which has few elements:
+
+struct product {
+   char productname[20];
+   int product_price;
+   int product_id;
+}
+
+
+Get the product name, price and id and display the product name and price in descending of the price.
+
+2) For the same above structure, now add another structure which is the category. That category will have products in it.
+
+
+Struct category
+{
+   char category_name[20];
+   int cat_id;
+} 
+
+
+According the category get the product name, product price and id, then display all the products category wise in descending order.
+
+3) For the same structure which as category and product, get the category id from the user in the product structure and save to the category list. Then display them all in category wise.
+
+4) A sheet full of data will be given with inventory stock list, which as different categories and different products as input with category capacity and product availability in the structure. Now we need to add a new category or new product with capacity and availability. Need to check whether the product availability is exceeding the category capacity, if yes the output rack is full or else tell how much free space is available and add the product to list.
+
+5) Constraints in the above in question will be given, need to solve all the constraints, so that the Technical HR gets satisfied.
+
+After these rounds, if they get satisfied, they will call you for Technical HR, followed by General HR. If you solved every single question and you were really fast in problem solving, then HR interview will be easy. Or else HR interview will be very tough especially the Technical HR (The Technical HR round as lots of logical questions)
+
+If you like GeeksforGeeks and would like to contribute, you can also write an article and mail your article to contribute@geeksforgeeks.org. See your article appearing on the GeeksforGeeks main page and help other Geeks.
+
+###########################################################################
